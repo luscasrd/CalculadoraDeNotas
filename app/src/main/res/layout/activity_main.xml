@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nota"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -15,7 +16,7 @@
         android:layout_marginTop="36dp"
         android:layout_marginEnd="68dp"
         android:layout_marginRight="68dp"
-        android:text="Bem vindo a Calculadora de Notas"
+        android:text="@string/BemVindo"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +31,7 @@
         android:layout_marginLeft="98dp"
         android:layout_marginEnd="98dp"
         android:layout_marginRight="98dp"
-        android:text="Insira as notas que deseja calcular"
+        android:text="@string/Insira"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BemVindo" />
@@ -46,11 +47,12 @@
         android:layout_marginRight="94dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Digite a nota 1"
+        android:hint="@string/Nota1"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InfoNotas" />
+        app:layout_constraintTop_toBottomOf="@+id/InfoNotas"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/nota2"
@@ -63,11 +65,12 @@
         android:layout_marginRight="94dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Digite a nota 2"
+        android:hint="@string/Nota2"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nota1" />
+        app:layout_constraintTop_toBottomOf="@+id/nota1"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/nota3"
@@ -80,11 +83,12 @@
         android:layout_marginRight="94dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Digite a nota 3"
+        android:hint="@string/Nota3"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nota2" />
+        app:layout_constraintTop_toBottomOf="@+id/nota2"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/nota4"
@@ -97,14 +101,15 @@
         android:layout_marginRight="94dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Digite a nota 4"
+        android:hint="@string/Nota4"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nota3" />
+        app:layout_constraintTop_toBottomOf="@+id/nota3"
+        android:autofillHints="" />
 
     <Button
-        android:id="@+id/BotaoCalcular"
+        android:id="@+id/calcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
@@ -117,13 +122,16 @@
         app:layout_constraintTop_toBottomOf="@+id/nota4" />
 
     <TextView
-        android:id="@+id/Resultado"
+        android:id="@+id/resultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BotaoCalcular" />
+        app:layout_constraintTop_toBottomOf="@+id/calcular"
+        app:layout_constraintVertical_bias="0.173" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
