@@ -1,6 +1,7 @@
 package com.example.calculadoradenotas
 
 import android.annotation.SuppressLint
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,9 +25,11 @@ class MainActivity : AppCompatActivity() {
 
             if(media <=6) {
                 resultado.setText("Infelizmente o Aluno foi Reprovado" + "\n" + "Nota Final: " + media)
+                resultado.setTextColor(Color.RED)
             }
             else {
                 resultado.setText("O Aluno foi Aprovado" + "\n" + "Nota Final: " + media)
+                resultado.setTextColor(Color.GREEN)
             }
         }
     }
